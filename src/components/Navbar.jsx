@@ -70,4 +70,4 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default Navbar;
+export default  Navbar;
