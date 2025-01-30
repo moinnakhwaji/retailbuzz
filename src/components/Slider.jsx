@@ -33,10 +33,13 @@ const Slider = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-black text-white px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">Smart Solutions</h2>
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
+  Smart Solutions
+</h2>
+
         </div>
 
         {/* Slider */}
@@ -49,15 +52,15 @@ const Slider = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="flex items-center justify-between w-full bg-white shadow-lg rounded-lg p-8">
+              <div className="flex items-center justify-between w-full bg-gray-800 shadow-lg rounded-lg p-8 hover:scale-105 transition-transform duration-300">
                 {/* Left side (Text Content) */}
                 <div className="w-1/2 pr-8">
-                  <h3 className="text-2xl font-semibold mb-4">{slide.title}</h3>
-                  <p className="text-lg text-gray-600 mb-4">{slide.content}</p>
+                  <h3 className="text-3xl font-semibold text-white mb-4">{slide.title}</h3>
+                  <p className="text-lg text-gray-400 mb-4">{slide.content}</p>
                   {slide.buttonText && (
                     <button
                       onClick={handleNextSlide}
-                      className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700"
+                      className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
                     >
                       {slide.buttonText}
                     </button>
@@ -69,7 +72,7 @@ const Slider = () => {
                   <img
                     src={slide.img}
                     alt={slide.title}
-                    className="w-full h-auto rounded-lg"
+                    className="w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
